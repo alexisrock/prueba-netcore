@@ -1,0 +1,2 @@
+# pruebanetcore
+prueba de netcore
