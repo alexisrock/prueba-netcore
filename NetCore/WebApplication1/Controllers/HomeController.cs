@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
 
@@ -46,14 +50,48 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult CrearCliente(Cliente cliente)
         {
-            context.Cliente.Add(cliente);
-            context.SaveChanges();
-                 
+            using (IDbContextTransaction   tn =  context.Database.BeginTransaction()) {
+                if (ModelState.IsValid != false)
+                {
+                    context.Cliente.Add(cliente);
+                    context.SaveChanges();
+                    tn.Commit();
+                    ModelState.Clear();
+                    TempData["Mensaje"] = "Cliente creado con exito";
+                }
+                else {
+                    tn.Rollback();
+                    TempData["Mensaje_error"] = "Datos incorrectos";
+                }
+
+            }
+
+
             return View();
         }
 
 
+        public IActionResult Clientes()
+       {
+            return View();
+        }
 
+
+        public JsonResult GetClientes() {
+
+            var clientes = context.Cliente.ToList();
+
+            var ListaClientes = clientes.Select(x => new {
+                id = x.Id,
+                documento = x.Documento != null ? x.Documento : "",
+                Cliente = x.Nombre != null ? x.Nombre + " " + x.Apellidos : "",
+                telefono = x.Telefono != null ? x.Telefono : "",
+                direccion = x.Direccion != null ? x.Direccion : "",
+                estado = x.Estado == true ? "Activo" : "Inactivo"
+            }).ToList();
+
+            return Json(ListaClientes);
+        }
 
 
     }

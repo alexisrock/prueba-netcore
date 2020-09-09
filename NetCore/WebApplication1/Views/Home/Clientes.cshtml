@@ -1,0 +1,47 @@
+﻿
+@{
+	ViewData["Title"] = "Clientes";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Clientes</h1>
+
+<div class="container">
+
+	<br />
+
+	<div class="d-flex flex-wrap flex-row">
+		<div class="flex-column">
+			<a href="@Url.Action("CrearCliente","Home")" class="btn btn-outline-primary">Cliente</a>
+		</div>
+	</div>
+	<br />
+
+	<div class="d-flex flex-wrap flex-row">
+
+		<div class="table-responsive">
+
+			<table class="table table-bordered table-striped" id="tblCliente">
+				<thead>
+					<tr>
+						<th>Documento</th>
+						<th>Nombres</th>
+						<th>Telefono</th>
+						<th>Direccion</th>
+						<th>Estado</th>
+						<th>Accion</th>
+					</tr>
+
+				</thead>
+				<tbody></tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/Clientesjs.js"></script>
+

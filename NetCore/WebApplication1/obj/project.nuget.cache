@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DoZa0BaHuVlVpPWn2l9P+A8J6gTqtzcYLTPsAbcAmuAznjoWgkWAZbLTaofAjiH4oqt53y+gs3Zd0tjcJrRB5A==",
+  "dgSpecHash": "qdojsgSYo+zvIKL3N5An3MStIufVfh77V8mGhKpB4SvpT0Hmmr2EL3quBrvNHVRvJQHIi6UXgYDMdHhyn4ESIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO TINY\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\LENOVO TINY\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

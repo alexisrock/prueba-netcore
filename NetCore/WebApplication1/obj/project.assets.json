@@ -8510,11 +8510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\LENOVO TINY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO TINY\\AppData\\Roaming\\NuGet\\NuGet.Config",

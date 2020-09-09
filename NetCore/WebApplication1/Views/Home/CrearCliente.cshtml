@@ -1,64 +1,94 @@
 ﻿@model Cliente
 @{
-    ViewData["Title"] = "CrearCliente";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Crear Cliente";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>CrearCliente</h1>
 
 
-@using (Html.BeginForm()) { 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "formcliente" }))
+{
+	if (TempData["Mensaje"] != null)
+	{
 
-<div class="form-row">
+		<div class="alert alert-success" role="alert">
+			@TempData["Mensaje"]
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	}
+	if (TempData["Mensaje_error"] != null)
+	{
 
-	<div class="form-group col-sm-6">
-		<label>Cedula</label>
-		@Html.EditorFor(model=> model.Documento, new { htmlAttributes = new { @class= "form-control" } })
+		<div class="alert alert-danger" role="alert">
+			@TempData["Mensaje_error"]
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	}
+
+	<div id="mensaje"></div>
+	<div class="form-row">
+
+		<div class="form-group col-sm-6">
+			<label for="Documento">Cedula</label>
+			@Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+		</div>
+		<div class="form-group col-sm-6">
+			<label for="Nombre">Nombre</label>
+			@Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+
+		</div>
+
 
 	</div>
-	<div class="form-group col-sm-6">
-		<label>Nombre</label>
-		@Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+	<div class="form-row">
+
+		<div class="form-group col-sm-6">
+			<label for="Apellidos">Apellidos</label>
+			@Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+		</div>
+		<div class="form-group col-sm-6">
+			<label for="Telefono">Telefono</label>
+			@Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+		</div>
 
 
 	</div>
+	<div class="form-row">
 
+		<div class="form-group col-sm-6">
+			<label for="Direccion">Direccion</label>
+			@Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
 
-</div>
-<div class="form-row">
+		</div>
 
-	<div class="form-group col-sm-6">
-		<label>Apellidos</label>
-		@Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control" } })
 
 	</div>
-	<div class="form-group col-sm-6">
-		<label>Telefono</label>
-		@Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+	<div class="form-row">
+
+		<div class="form-group col-sm-6">
+			<button type="submit" id="btnenviarclient" style="display: none;" class="btn btn-outline-info">Enviar</button>
+			<button type="button" onclick="EnviarCliente()">Enviar</button>
+		</div>
+
 
 	</div>
-
-
-</div>
-<div class="form-row">
-
-	<div class="form-group col-sm-6">
-		<label>Direccion</label>
-		@Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
-
-	</div>
-
-
-</div>
-<div class="form-row">
-
-	<div class="form-group col-sm-6">
-	<button type="submit" class="btn btn-outline-info">Enviar</button>
-	</div>
-
-
-</div>
 
 
 
 }
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="~/js/ScriptValidacion.js"></script>
+
