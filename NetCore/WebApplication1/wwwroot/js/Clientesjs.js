@@ -37,3 +37,44 @@ function VerClilentes() {
 
 	})
 }
+
+
+function EliminarCliente(id) {
+
+	$.ajax({
+		url: '/home/EliminarCliente',
+		data: {
+			id: id
+		},
+		type: 'post',
+		success: function () {
+			VerClilentes();
+		}
+	});
+
+}
+
+function EditarCliente(id) {
+	$.ajax({
+		url: '/Home/Getcliente',
+		data: {
+			id: id
+		},
+		type: 'post',
+		success: function (data) {
+
+			$('#editDocumento').val(data.Id);
+			$('#editNombre').val(data.Nombre);
+			$('#editApellidos').val(data.Apellidos);
+			$('#editTelefono').val(data.Telefono);
+			$('#Direccion').val(data.Direccion);
+			//$('#editNombre').val(data.Estado);
+
+			$('#ModalEditCliente').modal('show');
+		}
+
+
+	});
+
+}
+	

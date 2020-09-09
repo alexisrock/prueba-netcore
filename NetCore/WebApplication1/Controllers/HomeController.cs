@@ -93,6 +93,41 @@ namespace WebApplication1.Controllers
             return Json(ListaClientes);
         }
 
+        public JsonResult EliminarCliente(int id) {
+
+            Cliente cliente = context.Cliente.Where(x => x.Id == id).FirstOrDefault();
+            if (cliente!=null) {
+                context.Cliente.Remove(cliente);
+                context.SaveChanges();
+            }
+            return Json(true);
+        }
+
+        public JsonResult Getcliente(int id) {
+
+            var cliente = context.Cliente.Where(x => x.Id == id).Select(x=>new { 
+            x.Apellidos,
+            x.Direccion,
+            x.Documento,
+            x.Estado,
+            x.Id,
+            x.Nombre,
+            x.Telefono
+            
+            }).FirstOrDefault();
+
+            if (cliente != null)
+            {
+
+
+                return Json(cliente);
+            }
+            else {
+                return Json(false);
+            }
+      
+         }
+
 
     }
 }
