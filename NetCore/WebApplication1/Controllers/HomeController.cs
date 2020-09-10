@@ -118,8 +118,6 @@ namespace WebApplication1.Controllers
 
             if (cliente != null)
             {
-
-
                 return Json(cliente);
             }
             else {
@@ -127,6 +125,29 @@ namespace WebApplication1.Controllers
             }
       
          }
+
+        public JsonResult GuardarInfoCliente(int id, string documento, string nombre, string apellidos, string telefono, string direccion, string estado) {
+
+
+            Cliente cliente = context.Cliente.Where(x => x.Id == id).FirstOrDefault();
+            if (cliente!=null)
+            {
+                cliente.Documento = documento;
+                cliente.Nombre = nombre;
+                cliente.Apellidos = apellidos;
+                cliente.Direccion = direccion;
+                cliente.Telefono = telefono;
+                cliente.Estado = Convert.ToBoolean(estado);
+                context.Entry(cliente).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+
+            return Json(true);
+        }
+
+
+
+
 
 
     }
