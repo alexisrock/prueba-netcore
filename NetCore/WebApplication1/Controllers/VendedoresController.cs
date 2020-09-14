@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Storage;
-using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
-
 namespace WebApplication1.Controllers
 {
     public class  VendedoresController : Controller
@@ -100,7 +103,8 @@ namespace WebApplication1.Controllers
                 vendedor.Nombres = nombre;
                 vendedor.Cargo = cargo;
                 vendedor.Estado = estado;
-
+                context.Entry(vendedor).State = EntityState.Modified;
+                context.SaveChanges();
 
             }
             return Json(true);

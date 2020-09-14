@@ -88,7 +88,7 @@ function GuardaVendedor() {
 			estado = false;
 		}
 		$.ajax({
-			url: '/Home/GuardarInfoVendedor',
+			url: '/Vendedores/GuardarInfoVendedor',
 			data: {
 				id: $('#editid').val(),			
 				nombre: $('#editNombres').val(),
@@ -98,7 +98,7 @@ function GuardaVendedor() {
 			type: 'post',
 			success: function (data) {
 				VerVendedores();
-
+				$('#ModalEditVendedor').modal('hide');
 			}
 
 		});
