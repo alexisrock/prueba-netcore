@@ -98,6 +98,8 @@ namespace WebApplication1.Models
 
                 entity.Property(e => e.IdVendedor).HasColumnName("id_vendedor");
 
+                entity.Property(e => e.NumFactura).HasColumnName("numFactura");
+
                 entity.Property(e => e.ValorTotal)
                     .HasColumnName("valor_total")
                     .HasColumnType("decimal(18, 2)");

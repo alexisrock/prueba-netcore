@@ -10,6 +10,7 @@ namespace WebApplication1.Models
         public int? IdCliente { get; set; }
         public int? IdVendedor { get; set; }
         public decimal? ValorTotal { get; set; }
+        public int? NumFactura { get; set; }
 
         public virtual Cliente IdClienteNavigation { get; set; }
         public virtual Vendedor IdVendedorNavigation { get; set; }
