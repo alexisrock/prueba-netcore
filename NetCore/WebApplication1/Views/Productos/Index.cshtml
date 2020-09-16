@@ -1,0 +1,114 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+	<div class="d-flex flex-wrap flex-row">
+		<div class="flex-column">
+			<a href="@Url.Action("CrearCliente","Productos")" class="btn btn-outline-primary">Cliente</a>
+		</div>
+	</div>
+	<br />
+
+	<div class="d-flex flex-wrap flex-row">
+
+		<div class="table-responsive">
+
+			<table class="table table-bordered table-striped" id="tblproductos">
+				<thead>
+					<tr>
+						<th>Codigo</th>
+						<th>Descripcion</th>
+						<th>Estado</th>					
+						<th>Accion</th>
+					</tr>
+
+				</thead>
+				<tbody></tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "formclienteedit" }))
+{
+	<div class="modal fade" id="ModalEditCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Editar Cliente</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="form-row">
+
+						<input id="editid" type="hidden" />
+
+						<div class="form-group col-sm-6">
+							<label for="editDocumento">Cedula</label>
+							<input id="editDocumento" type="text" class="form-control" />
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="editNombre">Nombre</label>
+							<input id="editNombre" type="text" class="form-control" />
+
+						</div>
+
+
+					</div>
+					<div class="form-row">
+
+						<div class="form-group col-sm-6">
+							<label for="editApellidos">Apellidos</label>
+							<input id="editApellidos" type="text" class="form-control" />
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="editTelefono">Telefono</label>
+							<input id="editTelefono" type="number" class="form-control" />
+						</div>
+
+
+					</div>
+					<div class="form-row">
+
+						<div class="form-group col-sm-6">
+							<label for="editDirecion">Direccion</label>
+							<input id="editDirecion" type="text" class="form-control" />
+						</div>
+
+					</div>
+					<div class="form-group ">
+						<div class="form-check">
+							<label for="editestado" class="form-check-label">Estado</label>
+							<input id="editestado" type="checkbox" class="form-check-input" />
+
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					<button class="btn btn-primary" onclick="GuardarCliente()">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+
+
+</div>
+

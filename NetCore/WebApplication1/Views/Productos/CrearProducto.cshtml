@@ -1,0 +1,74 @@
+﻿@model Producto
+@{
+	ViewData["Title"] = "CrearProducto";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CrearProducto</h1>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "FormProducto" }))
+{
+	if (TempData["Mensaje"] != null)
+	{
+
+		<div class="alert alert-success" role="alert">
+			@TempData["Mensaje"]
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	}
+	if (TempData["Mensaje_error"] != null)
+	{
+
+		<div class="alert alert-danger" role="alert">
+			@TempData["Mensaje_error"]
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	}
+	<div class="form-row">
+
+		<div class="form-group col-md-6">
+			<label>Codigo</label>
+			@Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+		</div>
+		<div class="form-group col-md-6">
+			<label>Descripcion</label>
+			@Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+
+		</div>
+
+
+	</div>
+	<div class="form-row">
+
+		<div class="form-group ">
+			<label>Estado</label>
+			<input type="checkbox" class="form-check-input" id="estadoproduct" name="estadoproduct" />
+
+
+		</div>
+	</div>
+		<div class="form-row">
+
+			<div class="form-group col-sm-6">
+				<button type="submit" id="btnenviarproducto" style="display: none;" class="btn btn-outline-info">Enviar</button>
+				<button type="button" class="btn btn-outline-primary" onclick="EnviarProductos()">Enviar</button>
+				<a class="btn btn-outline-success" href="@Url.Action("Index","Productos")">atras</a>
+			</div>
+
+
+		</div>
+
+
+
+
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="~/js/ScriptValidacion.js"></script>

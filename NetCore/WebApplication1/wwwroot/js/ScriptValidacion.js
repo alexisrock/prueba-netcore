@@ -122,3 +122,43 @@ function ValidarFormVendedor() {
 	return true;
 
 }
+
+
+
+function EnviarProductos() {
+
+
+	if (ValidarFormProducto()) {
+		$('#btnenviarproducto').trigger('click');
+	}
+	
+
+}
+
+function ValidarFormProducto() {
+	$('#FormProducto').validate({
+		rules: {
+			codigo: {
+				required: true,
+				minlength: 3
+			},
+			Descripcion: {
+				required: true,
+				minlength: 3
+			}
+		},
+		messages: {
+			codigo: {
+				required: "El campo es obligatorio",
+				minlength: "El campo debe tener minimo 3 caracteres"
+			},
+			Descripcion: {
+				required: "El campo es obligatorio",
+				minlength: "El campo debe tener minimo 3 caracteres"
+			}
+		}
+
+	})
+	return true;
+
+}
