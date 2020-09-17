@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Inventario</h1>
+
+
+<div class="container">
+
+
+	<div class="d-flex flex-wrap flex-row">
+		<div class="flex-column">
+			<a href="@Url.Action("CrearInventario","Invetario")" class="btn btn-outline-primary">Cliente</a>
+		</div>
+	</div>
+	<br />
+
+	<div class="d-flex flex-wrap flex-row">
+
+		<div class="table-responsive">
+
+			<table class="table table-bordered table-striped" id="tblinventario">
+				<thead>
+					<tr>
+						<th>codigo</th>
+						<th>Descripcion</th>
+						<th>Cant. Inicial</th>
+						<th>Cant. Salida</th>
+						<th>Stock</th>
+						<th>Precio Venta</th>
+						<th>Accion</th>
+					</tr>
+
+				</thead>
+				<tbody></tbody>
+
+			</table>
+
+		</div>
+
+	</div>
+</div>
+

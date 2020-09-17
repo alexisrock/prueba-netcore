@@ -74,7 +74,6 @@ function ValidarFormCliente() {
 	return true;
 }
 
-
 function EnviarVendedor() {
 
 	$('#mensaje').html('&nbsp;');
@@ -122,8 +121,6 @@ function ValidarFormVendedor() {
 	return true;
 
 }
-
-
 
 function EnviarProductos() {
 

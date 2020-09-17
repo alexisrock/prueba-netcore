@@ -457,3 +457,4 @@ C:\Users\LENOVO TINY\source\repos\pruebanetcore\NetCore\WebApplication1\obj\Debu
 C:\Users\LENOVO TINY\source\repos\pruebanetcore\NetCore\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.genruntimeconfig.cache
 C:\Users\LENOVO TINY\source\repos\pruebanetcore\NetCore\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Productos\CrearProducto.cshtml.g.cs
 C:\Users\LENOVO TINY\source\repos\pruebanetcore\NetCore\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Productos\Index.cshtml.g.cs
+C:\Users\LENOVO TINY\source\repos\pruebanetcore\NetCore\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Inventario\Index.cshtml.g.cs
