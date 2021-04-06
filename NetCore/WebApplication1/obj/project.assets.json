@@ -8510,9 +8510,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj",
+      "projectName": "Ejemplo MVC",
+      "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj",
       "packagesPath": "C:\\Users\\LENOVO TINY\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
@@ -8592,7 +8592,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

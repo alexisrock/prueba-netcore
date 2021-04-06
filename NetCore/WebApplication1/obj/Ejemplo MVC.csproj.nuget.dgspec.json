@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
-        "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj",
+        "projectName": "Ejemplo MVC",
+        "projectPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\Ejemplo MVC.csproj",
         "packagesPath": "C:\\Users\\LENOVO TINY\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\LENOVO TINY\\source\\repos\\pruebanetcore\\NetCore\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
